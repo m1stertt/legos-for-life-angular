@@ -10,6 +10,10 @@ import {ProductDto} from '../shared/product.dto';
 export class ProductsListComponent implements OnInit {
   products: ProductDto[] | undefined;
 
+
+  selectedProduct?: ProductDto;
+
+
   constructor(private _productService: ProductsService) { }
 
   ngOnInit(): void {
@@ -18,6 +22,10 @@ export class ProductsListComponent implements OnInit {
       .subscribe(products => {
         this.products = products;
       });
+  }
+
+  onSelect(product: ProductDto): void {
+    this.selectedProduct = product;
   }
 
 }
