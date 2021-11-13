@@ -1,12 +1,15 @@
 
 
 <h2>My Products</h2>
+<!--<button (click)="create()">Delete</button>-->
 <ul class="products">
-  <li *ngFor="let product of products"
-      [class.selected]="product === selectedProduct"
-      (click)="onSelect(product)">
-    <span class="badge">{{product.id}}</span> {{product.name}}
+  <li *ngFor="let product of products">
+    <a routerLink="{{product.id}}">
+      <span class="badge">{{product.id}}</span> {{product.name}}
+    </a>
+    <button (click)="delete(product)">Delete</button>
   </li>
 </ul>
 
-<app-inno-tech-product-detail [product]="selectedProduct"></app-inno-tech-product-detail>
+
+
