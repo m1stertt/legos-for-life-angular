@@ -1,7 +1,8 @@
 
 
 <h2>My Products</h2>
-<!--<button (click)="create()">Delete</button>-->
+<button (click)="create()">Create</button>
+
 <ul class="products">
   <li *ngFor="let product of products">
     <a routerLink="{{product.id}}">

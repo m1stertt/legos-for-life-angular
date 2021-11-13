@@ -19,10 +19,14 @@ export class ProductsService {
   }
 
   delete(id: number) {
-    return this._http.delete('https://localhost:5001/api/Product/' + id);
+    return this._http.delete<ProductDto>('https://localhost:5001/api/Product/' + id);
   }
 
-  updateProduct(product: ProductDto) {
-    return this._http.put('https://localhost:5001/api/Product/' + product.id, product)
+  updateProduct(product: ProductDto): Observable<ProductDto> {
+    return this._http.put<ProductDto>('https://localhost:5001/api/Product/' + product.id, product)
+  }
+
+  create(product: ProductDto): Observable<ProductDto> {
+    return this._http.post<ProductDto>('https://localhost:5001/api/Product', product)
   }
 }
