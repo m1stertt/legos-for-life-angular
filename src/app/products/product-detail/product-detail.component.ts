@@ -37,6 +37,7 @@ export class ProductDetailComponent implements OnInit {
   update() {
     if (this.product) {
       this.productsService.updateProduct(this.product).subscribe(() => {
+          this.location.back();
         },
         error => {
           console.log(error)
