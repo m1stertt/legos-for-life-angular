@@ -8,9 +8,10 @@ import {Router} from "@angular/router";
   templateUrl: './products-list.component.html',
   styleUrls: ['./products-list.component.scss']
 })
-export class ProductsListComponent implements OnInit {
-  products: ProductDto[] | undefined;
 
+export class ProductsListComponent implements OnInit {
+  products: ProductDto[]=[];
+  clickedProduct:ProductDto | undefined;
 
   constructor(private _productService: ProductsService,
               private router: Router) {

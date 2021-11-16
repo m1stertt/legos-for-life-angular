@@ -1,9 +1,21 @@
 /* Product's List Component private CSS styles */
+.products-list{
+  width:400px;
+  margin:auto;
+}
+
+table.mat-table{
+  width:400px;
+}
+
+h3 a:visited{ text-decoration: none; }
+
 .products {
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
   width: 15em;
+  display:inline;
 }
 .products li {
   cursor: pointer;

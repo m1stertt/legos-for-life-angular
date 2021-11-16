@@ -1,7 +1,21 @@
+<p>
+  <mat-toolbar>
+    <a routerLink=""><span>My Application - Product Manager</span></a>
+    <span class="example-spacer"></span>
+    <div *ngIf="profile$ | async as profile" style="float: right">
+      <span class="ost">Welcome {{profile.name}}</span>
+      <button style="margin-left:15px"
+        (click)="logout()"
+        class="float-right">Logout</button>
+    </div>
+  </mat-toolbar>
+</p>
+<router-outlet></router-outlet>
+<!--
 <a routerLink="" style="margin: 5px">Home</a>
 <a routerLink="products">Products</a>
 
-<div *ngIf="profile$ | async as profile else login" style="float: right">
+<div *ngIf="profile$ | async as profile" style="float: right">
   <span class="ost">Welcome {{profile.name}}</span>
   <a
     (click)="logout()"
@@ -13,3 +27,4 @@
     class="float-right">Login</a>
 </ng-template>
 <router-outlet></router-outlet>
+-->

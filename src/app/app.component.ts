@@ -30,6 +30,7 @@ export class AppComponent implements OnInit {
         if(succes) {
           this._router.navigateByUrl('');
         }
+        this._router.navigateByUrl('');
       });
   }
 }

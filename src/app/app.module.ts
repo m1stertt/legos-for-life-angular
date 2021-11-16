@@ -9,6 +9,8 @@ import {ReactiveFormsModule} from "@angular/forms";
 
 import { AuthInterceptor } from './auth/interceptors/auth.interceptor';
 import { AuthService } from './auth/shared/auth.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar'; 
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { AuthService } from './auth/shared/auth.service';
         AppRoutingModule,
         HttpClientModule,
         ReactiveFormsModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
     ],
     providers: [
       { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
