@@ -27,7 +27,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     ],
     providers: [
       { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
-      ,AuthService],
+      ,AuthService,AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
